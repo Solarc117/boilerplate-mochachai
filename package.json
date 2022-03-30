@@ -6,6 +6,9 @@
   "scripts": {
     "start": "node server.js"
   },
+  "engines": {
+    "node": "16.x"
+  },
   "dependencies": {
     "body-parser": "1.19.0",
     "chai": "4.3.4",
@@ -15,5 +18,12 @@
     "mocha": "9.0.3",
     "zombie": "6.1.4"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "heroku",
+    "node",
+    "mocha",
+    "express",
+    "freecodecamp"
+  ]
 }
