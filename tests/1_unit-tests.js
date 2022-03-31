@@ -106,9 +106,9 @@ suite('Unit Tests', function () {
   suite('Strings', function () {
     // #13
     test('#isString, #isNotString', function () {
-      assert.fail(Math.sin(Math.PI / 4))
-      assert.fail(process.env.PATH)
-      assert.fail(JSON.stringify({ type: 'object' }))
+      assert.isNotString(Math.sin(Math.PI / 4))
+      assert.isString(process.env.PATH)
+      assert.isString(JSON.stringify({ type: 'object' }))
     })
     // #14
     test('String #include, #notInclude', function () {
