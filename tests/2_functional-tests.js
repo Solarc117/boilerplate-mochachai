@@ -85,24 +85,16 @@ suite('Functional Tests with Zombie.js', function () {
 
   suite('"Famous Italian Explorers" form', function () {
     // #5
-    // Automate the following:
-      // Fill in the form with the surname Colombo
-      // Press the submit button
-    // And within the pressButton callback:
-      // Assert that status is OK 200
-      // Assert that the text inside the element span#name is 'Cristoforo'
-      // Assert that the text inside the element span#surname is 'Colombo'
-      // Assert that the element(s) span#dates exist and their count is 1
     test('Submit the surname "Colombo" in the HTML form', function (done) {
-      browser
-        .fill('surname', 'Colombo')
-        .then(() => browser.pressButton('submit', () => {
+      browser.fill('surname', 'Colombo').then(() =>
+        browser.pressButton('submit', () => {
           browser.assert.success()
           browser.assert.text('span#name', 'Cristoforo')
           browser.assert.text('span#surname', 'Colombo')
           browser.assert.elements('span#dates', 1)
           done()
-        }))
+        })
+      )
     })
     // #6
     test('Submit the surname "Vespucci" in the HTML form', function (done) {
