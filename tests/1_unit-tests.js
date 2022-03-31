@@ -145,9 +145,9 @@ suite('Unit Tests', function () {
   suite('Objects', function () {
     // #16
     test('#property, #notProperty', function () {
-      assert.fail(myCar, 'wings')
-      assert.fail(airlinePlane, 'engines')
-      assert.fail(myCar, 'wheels')
+      assert.notProperty(myCar, 'wings')
+      assert.property(airlinePlane, 'engines')
+      assert.property(myCar, 'wheels')
     })
     // #17
     test('#typeOf, #notTypeOf', function () {
