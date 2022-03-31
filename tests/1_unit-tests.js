@@ -76,12 +76,6 @@ suite('Unit Tests', function () {
   // -----------------------------------------------------------------------------
 
   function weirdNumbers(delta) {
-    // weirdNumbers(0.5) =>
-    // max: 1 + (0.5) - 0 = 1.5
-    // min: 1 + (0.5) - .9 = .1
-    // weirdNumbers(0.2) =>
-    // max: 1 + (0.2) - 0 = 1.2
-    // min: 1 + (0.2) - .9 = .3
     return 1 + delta - Math.random()
   }
 
@@ -102,8 +96,8 @@ suite('Unit Tests', function () {
     })
     // #10
     test('#approximately', function () {
-      assert.approximately(weirdNumbers(0.5), 1, 0.9)
-      assert.approximately(weirdNumbers(0.2), 1, 0.9)
+      assert.approximately(weirdNumbers(0.5), 1, 0.5)
+      assert.approximately(weirdNumbers(0.2), 1, 0.8)
     })
   })
 
