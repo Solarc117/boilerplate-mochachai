@@ -84,7 +84,7 @@ suite('Unit Tests', function () {
 
   const winterMonths = ['dec,', 'jan', 'feb', 'mar'],
     backendLanguages = ['php', 'python', 'javascript', 'ruby', 'asp']
-  
+
   suite('Arrays', function () {
     // #11
     test('#isArray, #isNotArray', function () {
@@ -103,6 +103,7 @@ suite('Unit Tests', function () {
   const formatPeople = function (name, age) {
     return '# name: ' + name + ', age: ' + age + '\n'
   }
+
   suite('Strings', function () {
     // #13
     test('#isString, #isNotString', function () {
@@ -112,8 +113,8 @@ suite('Unit Tests', function () {
     })
     // #14
     test('String #include, #notInclude', function () {
-      assert.fail('Arrow', 'row')
-      assert.fail('dart', 'queue')
+      assert.include('Arrow', 'row')
+      assert.notInclude('dart', 'queue')
     })
     // #15
     test('#match, #notMatch', function () {
